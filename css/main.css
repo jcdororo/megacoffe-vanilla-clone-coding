@@ -168,6 +168,11 @@ a {
 
 }
 
+.head .inner .head__sns .sns li a:hover {
+  background-color: #FDD000;
+  border-color: #FDD000;
+}
+
 .head .inner .head__sns .sns li a img {
   margin: auto;
 }
