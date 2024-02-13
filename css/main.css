@@ -426,6 +426,6 @@ header {
   cursor: pointer;
 }
 
-.chap__list__wrap > ul > .chap__list .chap__list__wrap__title > a {
+.chap__list__wrap > ul > .chap__list .chap__list__wrap__title .chap__list__wrap__title__text {
   color: #1C1C1B;
 }

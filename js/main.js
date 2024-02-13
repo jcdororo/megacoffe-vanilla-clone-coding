@@ -30,9 +30,6 @@ const chapEls = document.querySelectorAll('.chap__list')
 chapEls.forEach(function (chapEl, index) {
   chapEl.addEventListener('click', function() {
 
-    const target = chapEl.getAttribute('id');
-      window.location.hash = target;
-
     document.querySelectorAll('.chap__list.on').forEach(function(item) {
       item.classList.remove('on');
     });
@@ -44,11 +41,24 @@ chapEls.forEach(function (chapEl, index) {
 
 new Swiper('.swiper', {
   direction: 'horizontal',
-
   pagination: {
     el: '.swiper-pagination',
+    clickable: true
   },
-
 });
 
-window.addEventListener('scro')
+document.querySelectorAll('.swiper-pagination-bullet').forEach(function(bullet, index) {
+  bullet.addEventListener('click', function() {
+    mySwiper.slideTo(index); // 클릭된 버튼에 해당하는 슬라이드로 이동
+  });
+});
+
+
+const titleTextEls = document.querySelectorAll(".chap__list__wrap__title__text")
+
+titleTextEls.forEach(function(titleTextEl, index) {
+  const att = titleTextEl.getAttribute('href')
+  titleTextEl.addEventListener('click', function() {
+    gsap.to(window, { duration: .6, scrollTo: att });
+  })  
+})
