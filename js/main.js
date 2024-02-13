@@ -26,3 +26,32 @@ headLiEls.forEach(function(headLiEl) {
   })
 })
 
+const chapEls = document.querySelectorAll('.chap__list')
+
+chapEls.forEach(function (chapEl, index) {
+  chapEl.addEventListener('click', function() {
+
+    const target = chapEl.getAttribute('id');
+      window.location.hash = target;
+
+    document.querySelectorAll('.chap__list.on').forEach(function(item) {
+      item.classList.remove('on');
+    });
+
+    chapEl.classList.add('on')
+  })
+})
+
+
+new Swiper('.swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+});
