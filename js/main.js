@@ -69,7 +69,7 @@ sectionEls.forEach(function(titleTextEl, index) {
 let lastScrollTop  = 0
 let numIndex = 0;
 
-function test(event) {
+function scrolling(event) {
   if(event.deltaY > 0) {
     if(numIndex + 1 < arrIds.length) {
       numIndex += 1
@@ -92,7 +92,7 @@ function test(event) {
   gsap.to(window, { duration: .6, scrollTo: '#'+arrIds[numIndex] });
 }
 
-window.onwheel = test
+window.onwheel = _.throttle(scrolling, 600, { 'trailing': false });
 
 const chapEls = document.querySelectorAll('.chap__list')
 chapEls.forEach(function (chapEl, index) {
