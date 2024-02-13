@@ -1,5 +1,4 @@
 let headEl = document.querySelector('.head')
-// let headEl = document.querySelector('.head')
 const headLiEls = headEl.querySelectorAll('.inner .head__menu .menu li')
 const dropMenuEls = headEl.querySelectorAll('.inner .head__menu .menu li .head__menu__dropmenu')
 
@@ -44,14 +43,12 @@ chapEls.forEach(function (chapEl, index) {
 
 
 new Swiper('.swiper', {
-  // Optional parameters
-  // direction: 'vertical',
   direction: 'horizontal',
-  loop: true,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
 
 });
+
+window.addEventListener('scro')
