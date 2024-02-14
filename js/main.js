@@ -89,6 +89,12 @@ function scrolling(event) {
       document.querySelectorAll('.chap__list')[numIndex].classList.add('on')
     }
   }
+  if(arrIds[numIndex] === 'main') {
+    document.querySelector('.head .inner .logo').classList.add('fixed')
+  } else {
+    document.querySelector('.head .inner .logo').classList.remove('fixed')
+
+  }
   gsap.to(window, { duration: .6, scrollTo: '#'+arrIds[numIndex] });
 }
 

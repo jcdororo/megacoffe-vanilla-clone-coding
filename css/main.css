@@ -155,6 +155,18 @@ header {
   cursor: pointer;
 }
 
+.head .inner .logo > img:first-child {
+  display: none;
+}
+
+.head .inner .logo.fixed > img:first-child {
+  display: block;
+}
+
+.head .inner .logo.fixed > img:last-child {
+  display: none;
+}
+
 .head .inner .head__menu {
   height: 100%;
   position: absolute;
