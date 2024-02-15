@@ -90,9 +90,11 @@ function scrolling(event) {
     }
   }
   if(arrIds[numIndex] === 'main') {
-    document.querySelector('.head .inner .logo').classList.add('fixed')
-  } else {
     document.querySelector('.head .inner .logo').classList.remove('fixed')
+    document.querySelector('.head').classList.remove('fixed')
+  } else {
+    document.querySelector('.head .inner .logo').classList.add('fixed')
+    document.querySelector('.head').classList.add('fixed')
 
   }
   gsap.to(window, { duration: .6, scrollTo: '#'+arrIds[numIndex] });

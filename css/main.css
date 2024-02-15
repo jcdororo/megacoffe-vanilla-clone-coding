@@ -169,6 +169,10 @@ header {
   z-index: 1;
 }
 
+.head.fixed {
+  background-color: #FFF;
+}
+
 .head:hover {
   height: 255.65px;
 }
@@ -180,9 +184,6 @@ header {
 .head.stretch {
   height: 255.65px;
 }
-
-
-
 
 .head .inner {
   position: relative;
@@ -209,15 +210,19 @@ header {
 }
 
 .head .inner .logo > img:first-child {
+  display: block;
+}
+
+.head .inner .logo > img:last-child {
   display: none;
 }
 
 .head .inner .logo.fixed > img:first-child {
-  display: block;
+  display: none;
 }
 
 .head .inner .logo.fixed > img:last-child {
-  display: none;
+  display: block;
 }
 
 .head .inner .head__menu {
@@ -226,9 +231,7 @@ header {
   padding: 0 300px;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  
-  
+  margin: 0 auto;  
 }
 
 .head .inner .head__menu .menu {
@@ -420,14 +423,55 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);  
-  background-color: #333;
   justify-content: center;
 }
 
 .section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left {
   height: 100%;
   width: 515px;
-  background-color: green;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__info {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title {
+  position: relative;
+  font-size: 60px;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 240px;
+  height: 66px;
+  z-index: -1;
+  background: #fff;
+  bottom: -10px;
+  left: -15px;
+
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title__info {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title__info > span{
+  font-size: 48px;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__text__title {
+  font-weight: 400;
+  font-size: 22px;
+  margin: 30px 0px 20px 0px;
+  line-height: 1.2;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__text__info {
+  opacity: .6;
 }
 
 .section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__right {
