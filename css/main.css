@@ -402,8 +402,38 @@ header {
 }
 
 .section.section__franchise {
-  background-color: yellow;
+  position: relative;
+}
 
+.section.section__franchise .franchise__wrapper {
+  position: relative;
+  height: 100%;
+  background-color: #FDD000;
+
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 451px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  background-color: #333;
+  justify-content: center;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left {
+  height: 100%;
+  width: 515px;
+  background-color: green;
+}
+
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__right {
+  height: 100%;
+  width: 515px;
+  background-color: greenyellow;
 }
 
 .section.section__company {
