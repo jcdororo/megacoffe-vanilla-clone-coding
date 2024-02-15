@@ -116,11 +116,22 @@ new Swiper('.section__menu .menu__wrapper .middle .contents .contents__list > ul
   // direction: 'horizontal', // 수평 슬라이드
   // autoplay: true, // 자동 재생 여부
   loop: true, // 반복 재생 여부
-  spaceBetween: 40, // 슬라이드 사이 여백
+  spaceBetween: 100, // 슬라이드 사이 여백
   slidesPerView: 2, // 한 번에 보여줄 슬라이드 개수
   // slidesPerGroup: 5, // 한 번에 슬라이드 할 개수(전체 개수로 나뉘어야 함)
   navigation: { // 슬라이드 이전/다음 버튼 사용 여부
-    prevEl: '.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-button-prev', // 이전 버튼 선택자
-    nextEl: '.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-button-next' // 다음 버튼 선택자
+    prevEl: '.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-prev', // 이전 버튼 선택자
+    nextEl: '.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-next' // 다음 버튼 선택자
   }
+})
+// .section__menu .menu__wrapper .middle .contents .contents__list > ul > li
+const spyEls = document.querySelectorAll('.section__menu')
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl,
+      triggerHook: 0.1
+    })
+    .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller()) 
 })

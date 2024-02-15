@@ -21,6 +21,58 @@ header {
   z-index: 1;
 }
 
+/*  */
+.back-to-position-bg {
+  /* opacity: 0; */
+  transition: .5s;
+}
+.back-to-position-bg.to-wide {  
+  width: 0%;
+}
+.show .back-to-position-bg {
+  /* opacity: 1; */
+  width: 110%;
+}
+/* scroll magic back to position */
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+.back-to-position.to-right {
+  transform: translateX(-50px);  
+}
+.back-to-position.to-left {
+  transform: translateX(50px);
+}
+.back-to-position.to-up {
+  transform: translateY(50px);
+}
+.back-to-position.to-down {
+  transform: translateY(-50px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-0 {
+  transition-delay: 0s;
+}
+.show .back-to-position.delay-1 {
+  transition-delay: .3s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: .6s;
+}
+.show .back-to-position.delay-3 {
+  transition-delay: .9s;
+}
+.show .back-to-position.delay-4 {
+  transition-delay: 1.2s;
+}
+
+.show .back-to-position-bg.delay-0 {
+  transition-delay: .3s;
+}
 
 
 /* swiper */
@@ -314,7 +366,7 @@ header {
 }
 
 .section.section__main .swiper .swiper-wrapper .swiper-slide {
-  
+
 }
 
 .section.section__main .swiper .swiper-wrapper .swiper-slide .swiper-slide__img {
@@ -459,7 +511,7 @@ header {
 .section__menu .menu__wrapper .middle .contents {
   /* padding: 0px 50px; */
   /* width: 90%; */
-  max-width: 95%;
+  /* max-width: 95%; */
   margin: 0 auto;
 }
 
@@ -478,15 +530,14 @@ header {
   list-style: none;
   padding: 0px;
   margin: 0px;
-  justify-content: center;
 }
 
-.section__menu .menu__wrapper .middle .contents .contents__list > ul > li {
+.section__menu .menu__wrapper .middle .contents .contents__list > ul li {
   position: relative;
   list-style: none;
   padding: 0px;
   margin: 0px;
-  margin-left: 70px;
+  margin-left: 180px;
 }
 
 
@@ -521,10 +572,10 @@ header {
   position: absolute;
   top: 80%;
   bottom: 0;
-  left: 0;
+  left: -5%;
   right: 0;
   margin: auto;
-  width: 110%;
+  /* width: 110%; */
   height: 37px;
   background-color: #FDD000;
   z-index: -1;
@@ -552,11 +603,18 @@ header {
   margin-top: 0;
 }
 
+
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .contents__text__box .contents__text > b {
+  opacity: 1;
   font-weight: 400;
   font-size: 1.4em;
   line-height: 1.2;
 }
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .contents__text__box .contents__text > span {
+  opacity: .6;
+}
+
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .contents__text__box2 {
 
@@ -593,37 +651,58 @@ header {
 
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper {
-  /* position: absolute; */
+  position: relative;
   width: 510px;
-  width: 700px;
+  width: 780px;
   height: 600px;
-  background-color: orange;
   flex-grow: 1;
 }
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper {
-
+  position: relative;
 }
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide {
-  
+  position: relative;
 }
+
 
 
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__img {
+  border: solid #F4F6F8 1.5px;
+  border-radius: 10px 10px 0 0;
   width: 418px;
   background-color: orange;
+
 }
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__info {
-  height: 100%;
-  background-color: cyan;
-}
-.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide.swiper-slide-next .swiper-slide__menu__info {
+  max-width: 124%;
+  width: 124%;
+  height: 177px;
+  background-color: #F4F6F8;
   display: none;
+  padding: 8%;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+
 }
 
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide.swiper-slide-next {
+  
+}
+
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide__menu__info {
+  display: block;
+
+}
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide.swiper-slide-next .swiper-slide__menu__info {
+
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__img ,
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide.swiper-slide-next .swiper-slide__menu__img {
   position: absolute;
   height: 418px;
@@ -632,16 +711,78 @@ header {
   margin: auto;
 }
 
-
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide.swiper-slide-active .swiper-slide__menu__img {
+  position: relative;
+  width: 418px;
+  /* background-color: orange; */
+}
 
 .section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__info {
 
 }
 
-.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-button-prev {
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__info .menu__info__title {
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__info .menu__info__info {
+  font-size: 0.9em;
+  opacity: .5;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-slide .swiper-slide__menu__info .menu__info__text {
+  font-size: 0.9em;
+  opacity: .5;
+  text-overflow: ellipsis;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-prev {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
 
 }
 
-.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-wrapper .swiper-button-next {
-
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-next {
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
 }
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .arrow {
+  width: 40px;
+  height: 40px;
+  border: solid black;
+  border-width: 3px 0px 0px 3px;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-prev .arrow--left {
+  transform: rotate(-45deg);
+  opacity: .2;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-next .arrow--right {
+  transform: rotate(135deg);
+  opacity: .2;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .arrow:hover {
+  opacity: 1;
+}
+
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-prev::after,
+.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-next::after {
+  display: none;
+}
+

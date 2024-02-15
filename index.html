@@ -21,6 +21,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
   <!-- LODASH -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <script defer src="./js/main.js"></script>
   <title>메가MGC커피</title>
 </head>
@@ -276,7 +279,7 @@
 
       </div>
       <!-- MENU -->
-      <div id="menu" class="section section__menu">
+      <div id="menu" class="section section__menu scroll-spy">
         <div class="menu__wrapper">
           <div class="middle">
             <div class="contents">
@@ -287,24 +290,26 @@
                       <div class="contents__title__info"> 메가MGC커피 딸기시즌 신메뉴</div>
                       <div class="contents__title robo">
                         <h2>
-                          <div class="contents__title__bg__yellow"></div>
-                          <span class="contents__title__bg">
+                          <div class="contents__title__bg__yellow back-to-position-bg to-wide delay-0"></div>
+                          <div class="contents__title__bg back-to-position to-up delay-0">
                             Heart Berry Attack!
-                          </span>
+                          </div>
                         </h2>
                       </div>
                     </div>
                     <div class="contents__text__box">
-                      <div class="contents__text">
+                      <div class="contents__text back-to-position to-up delay-1">
                         <b> 두근두근! 달콤한 딸기의 설레는 만남 </b>
                       </div>
-                      <div class="contents__text">
-                        콩닥콩닥 달콤한 딸기의 상큼한 만남! <br />
-                        두근두근 달콤한 딸기의 설레는 만남! <br />
-                        지금 바로 가까운 메가MGC커피에서 만나보세요!
+                      <div class="contents__text back-to-position to-up delay-2">
+                        <span>
+                          콩닥콩닥 달콤한 딸기의 상큼한 만남! <br />
+                          두근두근 달콤한 딸기의 설레는 만남! <br />
+                          지금 바로 가까운 메가MGC커피에서 만나보세요!
+                        </span>
                       </div>
                     </div>
-                    <div class="contents__text__box2">
+                    <div class="contents__text__box2 back-to-position to-up delay-3">
                       <div class="btn">
                         <a href="javascript:void(0)">
                           <!-- <input type="button" value="메뉴 더보기" class="btn btn1" /> -->
@@ -319,23 +324,60 @@
                       <div class="swiper-wrapper">
                         <div class="swiper-slide">
                           <img src="images/menu1.jpg" class="swiper-slide__menu__img" />
-                          <!-- <div class="swiper-slide__menu__img" style="background-image: url(images/menu1.jpg);"></div> -->
-                          <div class="swiper-slide__menu__info">인포입니다</div>
+                          <div class="swiper-slide__menu__info">
+                            <div class="menu__info__title">쇼콜라 딸기라떼 프라페</div>
+                            <div class="menu__info__info">Chocolat Strawberry Latte frappe</div>
+                            <div class="menu__info__text">진하고 꾸덕한 초코 젤라또를 부드럽고 상큼달콤한 딸기 연유 쉐이크에 더해 강렬한 달콤함을 즐길 수 있는 딸기시즌 한정 프라페</div>
+                          </div>
                         </div>
                         <div class="swiper-slide">
                           <img src="images/menu2.jpg" class="swiper-slide__menu__img" />
-                          <!-- <div class="swiper-slide__menu__img" style="background-image: url(images/menu1.jpg);"></div> -->
-                          <div class="swiper-slide__menu__info">인포입니다</div>
+                          <div class="swiper-slide__menu__info">
+                            <div class="menu__info__title">하트 뿅! 레몬셔벗 딸기 스무디</div>
+                            <div class="menu__info__info">Heart Attack Lemon sherbet Strawberry Smoothie</div>
+                            <div class="menu__info__text">하트펄과 레몬 소르베로 사랑스러운 비주얼부터 맛까지, 딸기&레몬 조합에 깔끔한 백차를 활용한 새콤달콤한 딸기시즌 한정 스무디</div>
+                          </div>
                         </div>
                         <div class="swiper-slide">
                           <img src="images/menu3.jpg" class="swiper-slide__menu__img" />
-                          <!-- <div class="swiper-slide__menu__img" style="background-image: url(images/menu1.jpg);"></div> -->
-                          <div class="swiper-slide__menu__info">인포입니다</div>
+                          <div class="swiper-slide__menu__info">
+                            <div class="menu__info__title">하트 뿅! 딸기레몬 티플레저</div>
+                            <div class="menu__info__info">Heart Attack Strawberry&Lemon TeaPleasure</div>
+                            <div class="menu__info__text">하트펄로 귀염뽀짝한 비주얼에 재밌는 식감까지,새콤달콤한 딸기&레몬 조화에 탄산을 더해 청량하고 깔끔한 맛을 느낄 수 있는 딸기 시즌 한정 티플레저</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/menu4.jpg" class="swiper-slide__menu__img" />
+                          <div class="swiper-slide__menu__info">
+                            <div class="menu__info__title">딸기라떼</div>
+                            <div class="menu__info__info">Strawberry Latte</div>
+                            <div class="menu__info__text">딸기과육이 풍부히 느껴지는 스테디 셀러 산뜻하고 달콤한 딸기가 가득해 부드러운 우유와 어우러져 더욱 기분 좋게 즐기는 아이스 라떼</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/menu5.jpg" class="swiper-slide__menu__img" />
+                          <div class="swiper-slide__menu__info">
+                            <div class="menu__info__title">딸기쿠키 브레드푸딩</div>
+                            <div class="menu__info__info">Strawberry Cookie Bread Pudding</div>
+                            <div class="menu__info__text">부드러운 바닐라 크림 베이스에 계란과자가 콕콕! 달콤하고 큼직한 과육의 딸기잼, 초코 크럼블을 가득 토핑한 달콤한 브레드 푸딩</div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="images/menu6.jpg" class="swiper-slide__menu__img" />
+                          <div class="swiper-slide__menu__info">
+                            <div class="menu__info__title">아이스 딸기라떼 와앙 슈</div>
+                            <div class="menu__info__info">Ice Strawberry Latte Choux</div>
+                            <div class="menu__info__text">바삭한 딸기 쿠키슈 안에 부드럽고 향긋한 딸기우유맛 크림이 가득 들어간 아이스 와앙 슈</div>
+                          </div>
                         </div>
                       </div>
                     
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev">
+                        <div class="arrow arrow--left"></div>
+                      </div>
+                      <div class="swiper-button-next">
+                        <div class="arrow arrow--right"></div>
+                      </div>
                     
                     </div>
                   </li>
