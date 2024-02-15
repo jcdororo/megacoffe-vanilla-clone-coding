@@ -126,7 +126,7 @@ new Swiper('.section__menu .menu__wrapper .middle .contents .contents__list > ul
     nextEl: '.section__menu .menu__wrapper .middle .contents .contents__list > ul > li .swiper .swiper-button-next' // 다음 버튼 선택자
   }
 })
-// .section__menu .menu__wrapper .middle .contents .contents__list > ul > li
+
 const spyEls = document.querySelectorAll('.section__menu')
 spyEls.forEach(function (spyEl) {
   new ScrollMagic
@@ -135,5 +135,16 @@ spyEls.forEach(function (spyEl) {
       triggerHook: 0.1
     })
     .setClassToggle(spyEl, 'show')
+    .addTo(new ScrollMagic.Controller()) 
+})
+
+const leftEls = document.querySelectorAll('.franchise__left')
+leftEls.forEach(function (leftEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: leftEl,
+      triggerHook: 0.5
+    })
+    .setClassToggle(leftEl, 'show')
     .addTo(new ScrollMagic.Controller()) 
 })
