@@ -73,11 +73,13 @@ function scrolling(event) {
   if(event.deltaY > 0) {
     if(numIndex + 1 < arrIds.length) {
       numIndex += 1
+      console.log(arrIds,numIndex)
 
       document.querySelectorAll('.chap__list.on').forEach(function(item) {
         item.classList.remove('on');
       });
-      document.querySelectorAll('.chap__list')[numIndex].classList.add('on')
+      console.log('asdasd',document.querySelectorAll('.chap__list'))
+      document.querySelectorAll('.chap__list')[numIndex] ? document.querySelectorAll('.chap__list')[numIndex].classList.add('on') : ''
     }
   } else {
     if(numIndex - 1 >= 0) {
@@ -99,6 +101,7 @@ function scrolling(event) {
   }
   gsap.to(window, { duration: .6, scrollTo: '#'+arrIds[numIndex] });
 }
+
 
 window.onwheel = _.throttle(scrolling, 600, { 'trailing': false });
 
@@ -140,6 +143,17 @@ spyEls.forEach(function (spyEl) {
 
 const leftEls = document.querySelectorAll('.franchise__left')
 leftEls.forEach(function (leftEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: leftEl,
+      triggerHook: 0.5
+    })
+    .setClassToggle(leftEl, 'show')
+    .addTo(new ScrollMagic.Controller()) 
+})
+
+const companyLeftEls = document.querySelectorAll('.company__wrapper__left')
+companyLeftEls.forEach(function (leftEl) {
   new ScrollMagic
     .Scene({
       triggerElement: leftEl,
