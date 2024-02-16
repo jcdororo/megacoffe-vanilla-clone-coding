@@ -146,7 +146,7 @@ leftEls.forEach(function (leftEl) {
   new ScrollMagic
     .Scene({
       triggerElement: leftEl,
-      triggerHook: 0.5
+      triggerHook: 0.4
     })
     .setClassToggle(leftEl, 'show')
     .addTo(new ScrollMagic.Controller()) 
@@ -157,7 +157,7 @@ companyLeftEls.forEach(function (leftEl) {
   new ScrollMagic
     .Scene({
       triggerElement: leftEl,
-      triggerHook: 0.5
+      triggerHook: 0.2
     })
     .setClassToggle(leftEl, 'show')
     .addTo(new ScrollMagic.Controller()) 

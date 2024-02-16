@@ -23,7 +23,6 @@ header {
 
 /*  */
 .back-to-position-bg {
-  /* opacity: 0; */
   transition: .5s;
 }
 
@@ -32,12 +31,15 @@ header {
 }
 
 .show .back-to-position-bg {
-  /* opacity: 1; */
   width: 110%;
 }
 
 .show .back-to-position-bg-company {
   width: 63%;
+}
+
+.show .back-to-position-bg-franchise {
+  width: 240px;
 }
 /* scroll magic back to position */
 .back-to-position {
@@ -83,6 +85,11 @@ header {
 .show .back-to-position-bg.delay-0 {
   transition-delay: .3s;
 }
+
+.show .back-to-position-bg-franchise.delay-0 {
+  transition-delay: .6s;
+}
+
 
 
 /* swiper */
@@ -439,6 +446,7 @@ header {
 .section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left {
   height: 100%;
   width: 515px;
+  position: relative;
 }
 
 .section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__info {
@@ -446,23 +454,26 @@ header {
   margin: 15px 0;
 }
 
+.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title__bg {
+  position: absolute;
+  left: -15px;
+  right: 0;
+  top: 41%;
+  margin: auto;
+  transform: translateX(-147px);
+  display: block;
+  height: 66px;
+  z-index: -1;
+  background: #fff;
+  transition: .5s;
+
+}
+
 .section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title {
   position: relative;
   font-size: 60px;
 }
 
-.section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 240px;
-  height: 66px;
-  z-index: -1;
-  background: #fff;
-  bottom: -10px;
-  left: -15px;
-
-}
 
 .section.section__franchise .franchise__wrapper .franchise__wrapper__middle .franchise__left .contents__title__info {
   margin-top: 10px;
@@ -568,7 +579,7 @@ header {
   margin: auto;
   background-color: #FDD000;
   transform: translateX(-122px);
-  transition: all 1s ease;
+  transition: all .8s ease;
 }
 
 .section.section__company .company__wrapper .company__wrapper__left .contents .contents__title {
