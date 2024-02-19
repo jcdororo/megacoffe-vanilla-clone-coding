@@ -162,3 +162,14 @@ companyLeftEls.forEach(function (leftEl) {
     .setClassToggle(leftEl, 'show')
     .addTo(new ScrollMagic.Controller()) 
 })
+
+const newsEls = document.querySelectorAll('.section__news')
+newsEls.forEach(function (newsEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: newsEl,
+      triggerHook: 0.5
+    })
+    .setClassToggle(newsEl, 'show')
+    .addTo(new ScrollMagic.Controller()) 
+})
