@@ -820,7 +820,7 @@ header {
 .section.section__foot .footer__wrapper ul li {
   width: 630px;
   height: 151px;
-  /* background-color: orange; */
+  margin-left: 15px;
 }
 
 .section.section__foot .footer__wrapper ul .footer__left .icons {
@@ -866,6 +866,38 @@ header {
 
 }
   
+.section.section__foot .footer__wrapper ul li .footer__right__infos {
+  
+}
+
+.section.section__foot .footer__wrapper ul li .footer__right__infos li {
+  
+}
+
+.section.section__foot .footer__wrapper ul li .footer__right__infos li div {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+  font-size: 14.4px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.section.section__foot .footer__wrapper ul li .footer__right__infos li div:hover {
+  text-decoration: underline;
+}
+
+.section.section__foot .footer__wrapper ul li .footer__right__infos li > div:first-of-type {
+  font-size: 17.28px;
+  color: #FFF;
+  margin-bottom: 20px;
+  cursor: auto;
+}
+
+.section.section__foot .footer__wrapper ul li .footer__right__infos li > div:first-of-type:hover {
+  text-decoration: none;
+}
+
+
 
 /* CHAP LIST */
 .chap__list__wrap {
