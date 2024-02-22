@@ -173,3 +173,11 @@ newsEls.forEach(function (newsEl) {
     .setClassToggle(newsEl, 'show')
     .addTo(new ScrollMagic.Controller()) 
 })
+
+
+const iconEl = document.querySelector('.scroll__down__icon__wrapper')
+
+iconEl.addEventListener('click', function() {
+  console.log('click')
+  gsap.to(window, { duration: .6, scrollTo: '#menu' });
+})
