@@ -352,7 +352,7 @@ header {
 .head .inner .head__sns .sns li a {
   padding: 3px;
   display: inline-block;
-  border: 2px solid black;
+  border: 2px solid #212121;
   border-radius: 50%;
   box-sizing: border-box;
 
@@ -919,7 +919,7 @@ header {
 .section.section__foot .footer__wrapper ul li .icons li .sns {
   padding: 3px;
   display: inline-block;
-  border: 2px solid black;
+  border: 2px solid #212121;
   border-radius: 50%;
   box-sizing: border-box;
   background-color: #FFF;

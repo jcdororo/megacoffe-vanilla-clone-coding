@@ -70,15 +70,14 @@ let lastScrollTop  = 0
 let numIndex = 0;
 
 function scrolling(event) {
+  // 화면 이동
   if(event.deltaY > 0) {
     if(numIndex + 1 < arrIds.length) {
       numIndex += 1
-      console.log(arrIds,numIndex)
 
       document.querySelectorAll('.chap__list.on').forEach(function(item) {
         item.classList.remove('on');
       });
-      console.log('asdasd',document.querySelectorAll('.chap__list'))
       document.querySelectorAll('.chap__list')[numIndex] ? document.querySelectorAll('.chap__list')[numIndex].classList.add('on') : ''
     }
   } else {
@@ -91,6 +90,7 @@ function scrolling(event) {
       document.querySelectorAll('.chap__list')[numIndex].classList.add('on')
     }
   }
+  // 로고 변경
   if(arrIds[numIndex] === 'main') {
     document.querySelector('.head .inner .logo').classList.remove('fixed')
     document.querySelector('.head').classList.remove('fixed')
@@ -178,6 +178,9 @@ newsEls.forEach(function (newsEl) {
 const iconEl = document.querySelector('.scroll__down__icon__wrapper')
 
 iconEl.addEventListener('click', function() {
-  console.log('click')
   gsap.to(window, { duration: .6, scrollTo: '#menu' });
+  document.querySelectorAll('.chap__list.on').forEach(function(item) {
+    item.classList.remove('on');
+  });
+  document.querySelectorAll('.chap__list')[1].classList.add('on')
 })
