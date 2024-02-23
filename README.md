@@ -49,6 +49,11 @@ function scrolling(event) {
 ```
 ## 화면에 보여졌을때 요소 출력
 
+<img src='./img/scroll_1.gif' alt="main_1" width="150" height="" />
+<img src='./img/scroll_2.gif' alt="main_1" width="150" height="" />
+<img src='./img/scroll_3.gif' alt="main_1" width="150" height="" />
+
+
 
 > ScrollMagic 라이브러리를 이용하여 구현하였다.
 
@@ -66,6 +71,7 @@ companyLeftEls.forEach(function (leftEl) {
 ```
 
 ```css
+/* 평소엔 보이지 않다가 .show 클래스가 추가되면 보이는 형태 */
 .back-to-position-bg {
   transition: .5s;
 }
