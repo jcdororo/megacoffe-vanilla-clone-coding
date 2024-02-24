@@ -12,7 +12,7 @@
 
 <br/>
 
-## 스크롤 화면 이동
+## 📜 스크롤 화면 이동
 
 > 뷰포트 화면 이동은 window객체의 wheel을 막고 , 화면을 section으로 나누어 gsap의 #id로 이동하는 것으로 구현.
 
@@ -47,7 +47,7 @@ function scrolling(event) {
   gsap.to(window, { duration: .6, scrollTo: '#'+arrIds[numIndex] });
 }
 ```
-## 화면에 보여졌을때 요소 출력
+## 💻 화면에 보여졌을때 요소 출력
 
 <img src='./img/scroll_1.gif' alt="main_1" width="150" height="" />
 <img src='./img/scroll_2.gif' alt="main_1" width="150" height="" />
@@ -116,7 +116,7 @@ companyLeftEls.forEach(function (leftEl) {
 ```
 
 
-## 스크롤바 숨기기
+## 👓 스크롤바 숨기기
 
 
 ```css
@@ -128,7 +128,7 @@ companyLeftEls.forEach(function (leftEl) {
 
 <br />
 
-## Youtube API
+## 📹 Youtube API
 
 > youtube iframe 문서를 참조하였다. https://developers.google.com/youtube/iframe_api_reference?hl=ko
 
